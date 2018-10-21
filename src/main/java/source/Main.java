@@ -1,6 +1,7 @@
 package source;
 
 import answers.Question1;
+import answers.Question4;
 import controllers.Question1Controller;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,9 +19,17 @@ import java.util.Arrays;
 @EnableAutoConfiguration
 @ComponentScan(basePackageClasses = Question1Controller.class)
 public class Main {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 //		int x = Question1.bestMergedPortfolio(new int[]{1,2,31,4,5,60});
-//		System.out.println(x);
-		SpringApplication.run(Main.class, args);
-	}
+//        int y = Question5.shareExchange(new int[]{1,4,2}, 3);
+//        int z = Question4.selectionFailedTradedesks(new String[][]{
+//                {"12", "12", "3", "X", "3"},
+//                {"23", "X", "X", "X", "3"},
+//                {"33", "21", "X", "X", "X"},
+//                {"9", "12", "3", "X", "X"},
+//                {"X", "X", "X", "4", "5"}
+//        }, 3);
+//        System.out.println(z);
+        SpringApplication.run(Main.class, args);
+    }
 }
