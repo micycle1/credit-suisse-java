@@ -1,4 +1,6 @@
 package source;
+
+import answers.Question1;
 import controllers.Question1Controller;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,9 +18,9 @@ import java.util.Arrays;
 @EnableAutoConfiguration
 @ComponentScan(basePackageClasses = Question1Controller.class)
 public class Main {
-
 	public static void main(String[] args) {
+//		int x = Question1.bestMergedPortfolio(new int[]{1,2,31,4,5,60});
+//		System.out.println(x);
 		SpringApplication.run(Main.class, args);
 	}
-
 }

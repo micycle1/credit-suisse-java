@@ -3,8 +3,11 @@ package answers;
 public class Question4 {
 
 	public static int selectionFailedTradedesks(String[][] rows, int numberMachines) {
-		// TODO Auto-generated method stub
-		return -1;
+		int minTime = 0;
+		for (String[] row : rows) {
+			// calc min time here?
+		}
+		return minTime; // return min here?
 	}
 
 }
