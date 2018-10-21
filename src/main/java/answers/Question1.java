@@ -11,5 +11,4 @@ public class Question1 {
         }
         return highest;
     }
-
 }
