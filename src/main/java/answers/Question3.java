@@ -5,7 +5,12 @@ import helpers.Edge;
 public class Question3 {
 
 	public static int lowestExposureToExchanges(int numNodes, Edge[] edgeList) {
-		// TODO Auto-generated method stub
+		int[] edgeCountPerNode = new int[numNodes];
+
+		for (Edge edge : edgeList) {
+//			edge.
+		}
+		//		edgeList[0].
 		return -1;
 	}
 

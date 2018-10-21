@@ -20,7 +20,7 @@ import java.util.Arrays;
 @ComponentScan(basePackageClasses = Question1Controller.class)
 public class Main {
     public static void main(String[] args) {
-//		int x = Question1.bestMergedPortfolio(new int[]{1,2,31,4,5,60});
+//		int x = Question1.bestMergedPortfolio(new int[]{15, 8, 6, 7});
 //        int y = Question5.shareExchange(new int[]{1,4,2}, 3);
 //        int z = Question4.selectionFailedTradedesks(new String[][]{
 //                {"12", "12", "3", "X", "3"},
@@ -29,7 +29,7 @@ public class Main {
 //                {"9", "12", "3", "X", "X"},
 //                {"X", "X", "X", "4", "5"}
 //        }, 3);
-//        System.out.println(z);
+//        System.out.println(x);
         SpringApplication.run(Main.class, args);
     }
 }
