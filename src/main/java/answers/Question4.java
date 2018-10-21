@@ -16,7 +16,7 @@ public class Question4 {
         for (String[] row : rows) {
             ArrayList<Integer> temp = new ArrayList<Integer>();
             for (String s : row) {
-                if (s == "X" || s == "x") {
+                if (s.equals("X")) {
                     if (temp.size() >= numberMachines) {
                         rowPossibles.add(new ArrayList<>(temp));
                     }
