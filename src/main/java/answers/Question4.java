@@ -1,52 +1,46 @@
 package answers;
 
-import org.apache.commons.collections4.ListUtils;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Question4 {
-
-    // todo arraylist -> linkedlist
 
     public static int selectionFailedTradedesks(String[][] rows, int numberMachines) {
         int minTime =  Integer.MAX_VALUE;
-        ArrayList<ArrayList<Integer>> rowPossibles = new ArrayList<>();
-
         for (String[] row : rows) {
-            ArrayList<Integer> temp = new ArrayList<Integer>();
-            for (String s : row) {
-                if (s.equals("X")) {
-                    if (temp.size() >= numberMachines) {
-                        rowPossibles.add(new ArrayList<>(temp));
+
+            int first_index = 0;
+            int total_sum = 0;
+            int count = 0;
+
+            for (int i = 0; i < row.length; i++) {
+                if (row[i].equals("X")) {
+                    if (count == numberMachines) {
+                        minTime = Math.min(minTime, total_sum);
                     }
-                    temp.clear();
+                    first_index = 0;
+                    total_sum = 0;
+                    count = 0;
                 } else {
-                    temp.add(Integer.valueOf(s));
-                    if (temp.size() == numberMachines) {
-                        rowPossibles.add(new ArrayList<>(temp));
-                        temp = new ArrayList<Integer>(temp.subList(1, temp.size()));
+                    if (count == 0) {
+                        first_index = i;
+                        total_sum = Integer.valueOf(row[i]);
+                        count++;
+                    }
+                    else {
+                        if (count == numberMachines) {
+                            minTime = Math.min(minTime, total_sum);
+                            total_sum -= Integer.valueOf(row[first_index]);
+                            first_index++;
+                        }
+                        else {
+                            total_sum += Integer.valueOf(row[i]);
+                            count++;
+                        }
                     }
                 }
-            }
-            if (temp.size() >= numberMachines) { // after last char in row, check again
-                rowPossibles.add(new ArrayList<>(temp));
             }
         }
 
-        if (rowPossibles.isEmpty()) {
+        if (minTime == Integer.MAX_VALUE) {
             minTime = 0;
-        }
-        else {
-            for (ArrayList<Integer> rowPossible : rowPossibles) {
-                int sum = 0;
-                for (Integer integer : rowPossible) {
-                    sum += integer;
-                }
-                if (sum < minTime) {
-                    minTime = sum;
-                }
-            }
         }
         return minTime; // return min here?
     }

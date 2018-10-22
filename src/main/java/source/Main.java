@@ -1,18 +1,12 @@
 package source;
 
-import answers.Question1;
 import answers.Question4;
 import controllers.Question1Controller;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.Arrays;
 
 @SpringBootApplication
 @Configuration
@@ -29,7 +23,8 @@ public class Main {
 //                {"9", "12", "3", "X", "X"},
 //                {"X", "X", "X", "4", "5"}
 //        }, 3);
-//        System.out.println(x);
+//        int a = Question4.selectionFailedTradedesks(new String[][]{{"X", "X", "2"}, {"2", "3", "X"}, {"X", "3", "2"}}, 3);
+//        System.out.println(a);
         SpringApplication.run(Main.class, args);
     }
 }
