@@ -17,7 +17,7 @@ public class Question5 {
                         table[i] = sub_res + 1;
                 }
         }
-        return table[totalValue];
+        return table[totalValue] == Integer.MAX_VALUE ? 0 : table[totalValue];
     }
 
 }
