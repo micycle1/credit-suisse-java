@@ -1,9 +1,7 @@
 package source;
 
-import answers.Question3;
-import answers.Question4;
+import answers.Question2;
 import controllers.Question1Controller;
-import helpers.Edge;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -42,7 +40,13 @@ public class Main {
 //                new Edge(new int[]{2, 4}),
 //                new Edge(new int[]{2, 5})
 //        }); // = 1
-//        System.out.println(a);
+//        int f = Question2.equallyBalancedCashFlow(new int[]{66, 293, 215, 188, 147, 326, 449, 162, 46, 350}, new int[]{170, 153, 305, 290, 187});
+//        int g = Question2.equallyBalancedCashFlow(new int[]{189, 28}, new int[]{43, 267, 112, 166});
+//        int h = Question2.equallyBalancedCashFlow(new int[]{72, 24, 73, 4, 28, 56, 1, 43}, new int[]{27});
+//        System.out.println(f);
+//        System.out.println(g);
+//        System.out.println(h);
+//
         SpringApplication.run(Main.class, args);
     }
 }
