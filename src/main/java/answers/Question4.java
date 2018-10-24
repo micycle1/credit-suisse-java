@@ -1,9 +1,23 @@
 package answers;
 
+import com.sun.deploy.util.StringUtils;
+import org.springframework.util.NumberUtils;
+
 public class Question4 {
 
     public static int selectionFailedTradedesks(String[][] rows, int numberMachines) {
         int minTime = Integer.MAX_VALUE;
+
+        if (numberMachines == 1) {
+            for (String[] row : rows) {
+                for (String s : row) {
+                    if (!s.equals("X")) {
+                        minTime = Math.min(minTime, Integer.valueOf(s));
+                    }
+                }
+            }
+            return minTime;
+        }
         for (String[] row : rows) {
             int first_index = 0;
             int total_sum = 0;
