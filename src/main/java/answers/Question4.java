@@ -1,8 +1,5 @@
 package answers;
 
-import com.sun.deploy.util.StringUtils;
-import org.springframework.util.NumberUtils;
-
 public class Question4 {
 
     public static int selectionFailedTradedesks(String[][] rows, int numberMachines) {
